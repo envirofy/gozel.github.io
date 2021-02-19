@@ -85,7 +85,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #76a96e;
 		background-image: url("images/bg02.png");
 	}
 
@@ -2331,7 +2331,7 @@ input, select, textarea {
 	#footer {
 		position: relative;
 		color: #858484;
-		background-color: #76a96e;
+		/* background-color: #76a96e; */
 		padding: 4em 0;
 	}
 
