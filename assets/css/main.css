@@ -2722,7 +2722,7 @@ input, select, textarea {
 				}
 
 				#navPanel .depth-0 {
-					color: #fff;
+					color: black;
 				}
 
 			body.navPanel-visible #page-wrapper {
