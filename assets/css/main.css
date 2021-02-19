@@ -2361,7 +2361,7 @@ input, select, textarea {
 		#footer ul.contact li,
 		#footer ul.dates li,
 		#footer ul.divided li {
-			border-top-color: #353434;
+			border-top-color: #76a96e;
 			border-top-color: rgba(255, 255, 255, 0.05);
 		}
 
@@ -2382,7 +2382,7 @@ input, select, textarea {
 
 		#copyright ul.links {
 			display: inline-block;
-			background: #2C2929;
+			background: #76a96eaa;
 			background: rgba(255, 255, 255, 0.05);
 			border-radius: 5px;
 			margin: 0;
