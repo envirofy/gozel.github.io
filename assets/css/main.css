@@ -2330,7 +2330,7 @@ input, select, textarea {
 
 	#footer {
 		position: relative;
-		color: #76a96e;
+		color: black;
 		/* background-color: #76a96e; */
 		padding: 4em 0;
 	}
@@ -2352,7 +2352,7 @@ input, select, textarea {
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #fff;
+			color: #76a96e;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
