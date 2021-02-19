@@ -1922,7 +1922,7 @@ input, select, textarea {
 				height: 3em;
 				text-align: center;
 				border-radius: 5px;
-				background: #888;
+				background: #76a96e;
 				-moz-transition: background-color .25s ease-in-out;
 				-webkit-transition: background-color .25s ease-in-out;
 				-ms-transition: background-color .25s ease-in-out;
@@ -1935,6 +1935,10 @@ input, select, textarea {
 					line-height: 1.5em;
 				}
 
+				ul.social li a:hover {
+					color: #76a96eaa;
+				}
+
 				ul.social li a.fa-facebook {
 					background: #3c5a98;
 				}
@@ -1944,11 +1948,11 @@ input, select, textarea {
 					}
 
 				ul.social li a.fa-twitter {
-					background: #2daae4;
+					background: #76a96e;
 				}
 
 					ul.social li a.fa-twitter:hover {
-						background: #3dbaf4;
+						background: #76a96eaa;
 					}
 
 				ul.social li a.fa-dribbble {
@@ -2332,7 +2336,7 @@ input, select, textarea {
 		position: relative;
 		color: black;
 		/* background-color: #76a96e; */
-		padding: 4em 0;
+		padding: 2em 0;
 	}
 
 		#footer:before {
@@ -2349,10 +2353,11 @@ input, select, textarea {
 
 		#footer a {
 			color: #76a96e;
+			font-family: 'Oleo Script', serif;
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #76a96e;
+			color: black;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
@@ -2378,7 +2383,7 @@ input, select, textarea {
 
 	#copyright {
 		text-align: center;
-		margin: 3em 0 2em 0;
+		margin: 0em 0 0em 0;
 	}
 
 		#copyright ul.links {
