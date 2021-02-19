@@ -85,7 +85,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #76a96e;
+		background: white;
 		background-image: url("images/bg02.png");
 	}
 
@@ -2330,7 +2330,7 @@ input, select, textarea {
 
 	#footer {
 		position: relative;
-		color: #858484;
+		color: #76a96e;
 		/* background-color: #76a96e; */
 		padding: 4em 0;
 	}
@@ -2348,7 +2348,7 @@ input, select, textarea {
 		}
 
 		#footer a {
-			color: #c5c4c4;
+			color: #76a96e;
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
@@ -2383,7 +2383,7 @@ input, select, textarea {
 
 		#copyright ul.links {
 			display: inline-block;
-			background: #76a96eaa;
+			background: #76a96eff;
 			background: rgba(255, 255, 255, 0.05);
 			border-radius: 5px;
 			margin: 0;
