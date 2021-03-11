@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/icon.png">
 	</head>
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -35,11 +36,10 @@
 														<nav id="nav" style="text-align: right;">
 															<ul>
 																<li><a href="index.html">Home</a></li>
-																<li><a href="how_it_works.html">How it Works</a></li>
+																<li><a href="how_it_works.html">Project</a></li>
 																<li class="current"><a href="install.html">Install</a></li>
 																<li><a href="events.html">Events</a></li>
 																<li><a href="team.html">Team</a></li>
-																<li><a href="contact.html">Contact</a></li>
 															</ul>
 														</nav>
 													</div>
@@ -65,54 +65,67 @@
 										<h2>Installation</h2>
 									</header>
 									<p>
-										Envirofy is available to anybody for free. If you are a UK based online grocery shopper, and you shop on Waitrose or Tesco, please feel free to install Envirofy. 
+										The Envirofy addon is part of a research project at the <a href="https://www.gla.ac.uk/schools/computing/staff/gozelshakeri/">Univeristy of Glasgow</a>. The aim of our research is to determine which behaviour change techniques support consumers in buying eco-friendly foods. You can read up on the <a href="how_it_works.html#publications">techniques</a> we use to support you, or watch a short <a href="index.html#how_it_works_video">demo video</a>.  
 									</p>
+
+									<p>
+										Envirofy works with <strong>Waitrose</strong> and <strong>Tesco</strong>. 
+									</p>
+
+									<section>
+										<label class="checkbox-container">I have read the <a href="ethics/Information sheet.pdf">Information Sheet</a>.
+										<input type="checkbox" class="compulsory">
+										<span class="checkmark"></span>
+										</label>
+
+										<label class="checkbox-container">I have read the <a href="ethics/Privacy Notice.pdf">Privacy Notice</a>.
+										<input type="checkbox" class="compulsory">
+										<span class="checkmark"></span>
+										</label>
+
+										<label class="checkbox-container">I have read the <a href="">Consent Form</a>.
+										<input type="checkbox" class="compulsory">
+										<span class="checkmark"></span>
+										</label>
+
+										<!--
+										<label class="checkbox-container">By clicking "install", I consent to the terms and conditions of this study. 
+										<input type="checkbox" class="compulsory">
+										<span class="checkmark"></span>
+										</label> 
+										-->
+									</section>
+
+									<a href="https://chrome.google.com/webstore/category/extensions">
+									<input type="submit" id="continue" value="Install" disabled>
+									</a>
+									
+									<!--
 									<section>
 										<div class="row">
-											<div class="col-4 col-6-medium col-12-small">
+											<div class="col-3 col-6-medium col-12-small">
 												<section class="box">
-													<a href="https://chrome.google.com/webstore/category/extensions" class="image featured"><img src="images/browsers/google_chrome.jpg" alt="" /></a>
-													<header>
-														<h3>Google Chrome</h3>
-													</header>
-													<p>Envirofy works with any Chromium based browser. Click the link below to get Envirofy on the Chrome Web Store.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="https://chrome.google.com/webstore/category/extensions" class="button alt">Install</a></li>
-														</ul>
-													</footer>
+													<a href="https://chrome.google.com/webstore/category/extensions" class="image" style="text-align: center;"><img src="images/browsers/google_chrome.jpg" alt="Google Chrome" style="width: 50%;"/></a>
 												</section>
 											</div>
-											<div class="col-4 col-6-medium col-12-small">
+											<div class="col-3 col-6-medium col-12-small">
 												<section class="box">
-													<a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home" class="image featured"><img src="images/browsers/microsoft_edge.jpg" alt="" /></a>
-													<header>
-														<h3>Microsoft Edge</h3>
-													</header>
-													<p>Envirofy works with any Chromium based browser. Click the link below to install Envirofy as an Edge Add-on.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home" class="button alt">Install</a></li>
-														</ul>
-													</footer>
+													<a href="https://apps.apple.com/us/story/id1377753262" class="image featured"><img src="images/browsers/safari.svg" alt="Safari Browser" style="width: 50%"/></a>
 												</section>
 											</div>
-											<div class="col-4 col-6-medium col-12-small">
+											<div class="col-3 col-6-medium col-12-small">
 												<section class="box">
-													<a href="https://addons.mozilla.org/en-US/firefox/extensions/" class="image featured"><img src="images/browsers/mozilla_firefox.jpg" alt="" /></a>
-													<header>
-														<h3>Firefox</h3>
-													</header>
-													<p>We worked hard to make Envirofy available for Firefox. Click the button below to install Envirofy for Firefox.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="https://addons.mozilla.org/en-US/firefox/extensions/" class="button alt">Install</a></li>
-														</ul>
-													</footer>
+													<a href="https://addons.mozilla.org/en-US/firefox/extensions/" class="image featured"><img src="images/browsers/mozilla_firefox.jpg" alt="Mozilla Firefox" style="width: 50%"/></a>
+												</section>
+											</div>
+											<div class="col-3 col-6-medium col-12-small">
+												<section class="box">
+													<a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home" class="image featured"><img src="images/browsers/microsoft_edge.jpg" alt="Microsoft Edge" style="width: 50%"/></a>
 												</section>
 											</div>
 										</div>
 									</section>
+									-->
 								</section>
 
 								<header>
@@ -124,8 +137,9 @@
 								</p>
 								</br>
 
-								<a href="#" class="image main" style="width: 50%"><img src="images/coming_soon.jpg" alt="" /></a>
-								
+								<section style="text-align:center;">
+										<img src="images/coming_soon.jpg" alt="Quick Start" style="width: 70%">
+								</section>
 							</article>
 
 					</div>
@@ -148,6 +162,19 @@
 			$("#inject_footer").load("footer.html"); 
 			});
 			</script>
+			<script>
+			var checkBoxes = $('input.compulsory'),
+				submitButton = $('#continue');
+
+			checkBoxes.change(function () {
+				submitButton.attr("disabled", checkBoxes.is(":not(:checked)"));
+				if(checkBoxes.is(":not(:checked)")) {
+					submitButton.addClass('disabled');
+				} else {
+					submitButton.removeClass('disabled');
+				}       
+			});
+			</script>
 
 	</body>
-</html>
+</html>	
