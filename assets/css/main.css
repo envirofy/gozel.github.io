@@ -2366,10 +2366,10 @@ input, select, textarea {
 			opacity: 0.5;
 		}
 
-		#footer a {
+		/* #footer a {
 			color: #76a96e;
-			/* font-family: 'Oleo Script', serif; */
-		}
+			font-family: 'Oleo Script', serif;
+		} */
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
 			color: black;
