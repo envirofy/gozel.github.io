@@ -1577,6 +1577,7 @@ input, select, textarea {
 	}
 
 		.box .image.featured {
+			text-align: center;
 			position: relative;
 			width: auto;
 			left: 1.75em;
@@ -1635,6 +1636,14 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			background: #e53359;
+		}
+
+		input[type="button"]:disabled,
+		input[type="submit"]:disabled,
+		input[type="reset"]:disabled,
+		button:disabled,
+		.button:disabled {
+			background: #827a7c;
 		}
 
 		input[type="button"]:active,
@@ -2074,6 +2083,12 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
+/* Person Wrapper */
+
+	#person-wrapper {
+		padding: 0 15px 40px 15px;
+	}
+
 /* Header */
 
 	#header {
@@ -2195,7 +2210,7 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		padding: 1em 0;
-		margin: 4em 0 0 0;
+		margin: 1em 0 0 0;
 	}
 
 		#banner header {
@@ -2377,6 +2392,43 @@ input, select, textarea {
 
 			#footer header h2 {
 				font-size: 1.75em;
+			}
+
+/* Person Box */
+
+.personbox {
+	background: #eee;
+	border-radius: 6px;
+	box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
+	padding: 2em;
+}
+
+	.personbox.feature {
+		padding: 0;
+	}
+
+		.personbox.feature .inner {
+			padding: 4em 2em 3em 2em;
+		}
+
+		.personbox.feature h2 {
+			font-size: .75em;
+		}
+
+		.personbox.feature p {
+			margin: 0;
+			font-size: 0.25em;
+		}
+
+		.personbox.feature .image {
+			position: relative;
+			margin: 0 0 2em 0;
+		}
+
+
+			.personbox.feature .image img {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
 			}
 
 /* Copyright */
@@ -2951,6 +3003,11 @@ input, select, textarea {
 				padding: 40px 0 20px 0;
 			}
 
+		/* Person Wrapper */
+			#person-wrapper {
+				padding: 0 15px 40px 15px;
+			}
+
 	}
 
 /* MIG papers */
@@ -2977,3 +3034,73 @@ input, select, textarea {
 .envirofy-papers-year, .envirofy-papers-year:hover, .envirofy-papers-edit, .envirofy-papers-edit:visited {
     color: #e93f33;
 }
+
+
+ /* Customize the label (the container) */
+ .checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	/* font-size: 22px; */
+	font-weight: 300;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+	background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  } 
