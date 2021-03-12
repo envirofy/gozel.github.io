@@ -1988,6 +1988,22 @@ input, select, textarea {
 						background: #76a96eaa;
 					}
 
+				ul.social li a.fa-github {
+					background: #76a96e;
+				}
+
+					ul.social li a.fa-github:hover {
+						background: #76a96eaa;
+					}
+				
+				ul.social li a.fa-envelope-open {
+					background: #76a96e;
+				}
+
+					ul.social li a.fa-envelope-open:hover {
+						background: #76a96eaa;
+					}
+
 				ul.social li a.fa-tumblr {
 					background: #2b4661;
 				}
