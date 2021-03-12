@@ -1956,6 +1956,14 @@ input, select, textarea {
 						background: #76a96eaa;
 					}
 
+				ul.social li a.fa-instagram {
+					background: #76a96e;
+				}
+
+					ul.social li a.fa-instagram:hover {
+						background: #76a96eaa;
+					}
+
 				ul.social li a.fa-twitter {
 					background: #76a96e;
 				}
