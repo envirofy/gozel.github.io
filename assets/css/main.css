@@ -1980,11 +1980,11 @@ input, select, textarea {
 						background: #d4477b;
 					}
 
-				ul.social li a.fa-linkedin {
+				ul.social li a.fa-linkedin-in {
 					background: #76a96e;
 				}
 
-					ul.social li a.fa-linkedin:hover {
+					ul.social li a.fa-linkedin-in:hover {
 						background: #76a96eaa;
 					}
 
