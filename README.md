@@ -4,9 +4,12 @@ Envirofy is the first science based web browser addon that supports online shopp
 
 # To do:
 - make videos! 
-- add "www" to gandhi / github? 
-- add automatic HTTPS to url also
-
+- make website mobile friendly
+- upate icon?
+- get social media accounts:
+	- instagram
+	- linkedin 
+- populate social media accounts with info
 
 ##Index:
 - add images of UofG, WWF, Which?, etc to increase trust
