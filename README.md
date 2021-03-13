@@ -4,12 +4,12 @@ Envirofy is the first science based web browser addon that supports online shopp
 
 # To do:
 - make videos! 
-- make website mobile friendly
 - upate icon?
 - get social media accounts:
 	- instagram
 	- linkedin 
 - populate social media accounts with info
+- make mobile friendly
 
 ##Index:
 - add images of UofG, WWF, Which?, etc to increase trust
@@ -23,7 +23,7 @@ Envirofy is the first science based web browser addon that supports online shopp
 - remove personal links
 
 ## Publications
-- add paper to server for download
+- 
 
 Webpage design based on Dopetrope by HTML5 UP
 html5up.net | @ajlkn
