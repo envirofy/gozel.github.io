@@ -1971,6 +1971,13 @@ input, select, textarea {
 					ul.social li a.fa-twitter:hover {
 						background: #76a96eaa;
 					}
+				ul.social li a.fa-user-circle {
+					background: #76a96e;
+				}
+
+					ul.social li a.fa-user-circle:hover {
+						background: #76a96eaa;
+					}
 
 				ul.social li a.fa-dribbble {
 					background: #c4376b;
