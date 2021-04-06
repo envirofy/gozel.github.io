@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Envirofy - the browser that helps you shop greener</title>
+		<title>Envirofy - the browser extension that helps you shop greener</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -28,18 +28,19 @@
 										<section>
 											<div class="row">
 												<div class="col-4 col-6-medium col-12-small">
-													<a href="index" class="image featured"><img src="images/logo/brand.png" alt="" style="width:70%"/></a>
+													<a href="https://envirofy.eu" class="image featured"><img src="images/logo/brand.png" alt="" style="width:70%"/></a>
 													
 												</div>
 												<div class="col-8 col-6-medium col-12-small">
 													<div class="container">
 														<nav id="nav" style="text-align: right;">
 															<ul>
-																<li><a href="index">Home</a></li>
-																<li class="current"><a href="how_it_works">Project</a></li>
+																<li><a href="https://envirofy.eu">Home</a></li>
+																<li class="current"><a href="project">Project</a></li>
 																<li><a href="install">Install</a></li>
 																<li><a href="events">Events</a></li>
 																<li><a href="team">Team</a></li>
+																<li><a href="join">Join Us</a></li>
 															</ul>
 														</nav>
 													</div>
@@ -62,71 +63,82 @@
 							<article class="box post">
 								
 								<header>
-									<h2>The Envirofy Project</h2>
+									<h2>How it Works</h2>
 								</header>
 								<p>
-									Envirofy is the first science-based eco-friendly web browser extension for online shoppers. The Envirofy addon is part of a collaborative research project from the <a href="https://www.gla.ac.uk/schools/computing/staff/gozelshakeri/">Univeristy of Glasgow</a> and the <a href="http://www.bristol.ac.uk/">Univeristy of Bristol</a>. The goal of our research is to determine which behaviour change techniques are the most effective in supporting online shoppers to buy eco-friendly food products. <!-- Check out this quick demo video to learn how Envirofy uses behaviour intervention science. For detailed information on our research, read our <a href="publications/publications.html">publications</a>.  -->
+									Envirofy calculates the carbon footprint of food by adding the CO_2 emissions caused by production, delivery, and packaging. 
 								</p>
 
 								<div class="row">
-									<div class="col-6 col-12-small">
+									
+									<div class="col-4 col-12-small">
 										<section class="box" style="text-align: center;">
-												<img src="images/institutions/UoG_colour.png" alt="University of Glasgow" style="width:70%">
+											<i class="icon solid featured alt fas fa-industry"></i>
 										</section>
 									</div>
-									<div class="col-6 col-12-small">
-										<section class="box" style="text-align: center;">
-												<img src="images/institutions/UofB_logo.png" alt="University of Bristol" style="width:70%">
+									<div class="col-8 col-12-small">
+										<section class="box">
+											<header>
+												<h2>Food Production</h2>
+											</header>
+											<p>
+											The CO2 cost of food production (e.g. environmental impact of growing food) is determined by the ingredients list. On the example of 
+											Tesco's <a href="https://www.tesco.com/groceries/en-GB/products/254865566">Sharwoods Green Label Mango Chutney 227G</a> the ingredients list reads “Sugar, Mangoes (45%), Salt, Acid (Citric Acid), Spices”. 
+											The mean CO2 value for each ingredient is extracted from \cite{Poore2018ReducingFoodImpact, BernersLee2011_HowBadAreBananas} (CO\textsubscript{2} is 
+											used as the measure of environmental impact as all publicly available databases provide these data, in contrast to GHG data). As the distribution of 
+											ingredients beyond the 45\% mango is not clearly stated, an exponential decay function is applied to determine the composition of the 
+											remaining 55\%: $y = a (1 - b) * x$; $x$ is the number of remaining items in the list, $(1-b)$ is the decay factor, and $a$ is the remaining 
+											percentage (e.g. 55\%), and $y$ the amount it contributes to the overall product. Items leading the ingredients list contribute greater towards the 
+											final product. If no ingredients list was provided on the product page, the algorithm used the words in the title as a 100\% component (e.g. mango from 
+											``Tesco Giant Mango Each'').
+											</p>
 										</section>
 									</div>
 								</div>
 
-								<header>
-									<h2>Collaborators</h2>
-								</header>
+								<div class="row">
+									
+									<div class="col-4 col-12-small">
+										<section class="box" style="text-align: center;">
+											<i class="icon solid featured alt fas fa-truck"></i>
+										</section>
+									</div>
+									<div class="col-8 col-12-small">
+										<section class="box">
+											<header>
+												<h2>Transportation</h2>
+											</header>
+											<p>
+											The T value is described as: $y = d * m * w$, where $d$ is the distance travelled, $m$ is the mode of transportation (e.g. lorry, plane), and $w$ is the net weight of the product. From a product's detail page, the list of origin countries is extracted. If there is a single country of origin, the distance between the user and that country's coordinates is calculated in kilometres. Country coordinates are from \cite{CountryCoordinates}; and participants' coordinates are retrieved from the Tesco website, as it collects location data. If multiple countries are listed including the UK, it is first checked whether the product is in season in the UK \cite{VegSocSeasonalProduce}; if true, the UK is assumed to be the country of origin. If however, the product is not in season in the UK or from outside the UK, the average distance from the participant's location to the other countries is calculated. 
 
-								<p>
-									We have an amazing team of non-academic collaborators working on Envirofy from industry and non-profit organisations.
-								</p>
+Transport mode ---lorry, train, ship, plane --- is determined on the distance of the product from the consumer, and whether that product is perishable (e.g. avocados). Perishable foods are transported by train or plane, and non-perishable and frozen foods are transported by sea or lorry \cite{TimeForChangeShipping}. If a product originates in Europe, non-perishable foods are on average transported to the UK via lorries, and perishable foods via train; otherwise via ship or plane \cite{FoodTransport}. 
+Keywords such as ``perfectly ripe``, ``frozen'', and ``dried'' help determine the mode of transport, as well as categorisation of products into ``fresh'' or ``cupboard''. The net weight of a product is extracted from its detail page. 
+											</p>
+										</section>
+									</div>
+								</div>
 
-								<ul>
-									<li><strong>Tesco</strong>, <a href="https://www.linkedin.com/in/laurence-webb-77373561/">Laurence Webb</a>, Sustainability Manager;</li>
-									<li><strong>WWF-UK</strong>, <a href="https://www.linkedin.com/in/liamwalsh123/">Liam Walsh</a>, Sustainable Diets Manager;</li>
-									<li><strong>Nourish Scotland</strong>, <a href="https://www.linkedin.com/in/pete-ritchie-52a27415/">Pete Ritchie</a>, Executive Director; </li>
-									<li><strong>Which?</strong>, <a href="https://www.linkedin.com/in/sue-davies-mbe-941029101/">Sue Davies</a>, Head of Consumer Protection and Food Policy; </li>
-									<li><strong>Food and Drink Federation Scotland</strong>, <a href="https://www.linkedin.com/in/cat-hay-2072636a/">Cat Hay</a>, Head of Food Policy FDF Scotland;</li>
-									<!--
-									<li><strong>Save Your Wardrobe</strong>, <a href="https://www.linkedin.com/in/hasnakourda/">Hasna Kourda</a>, Founder and CEO.</li>
-									<li><strong>University of Glasgow</strong>, <a href="https://www.gla.ac.uk/schools/business/staff/deirdreshaw/">Deirdre Shaw</a>, Professor in Ethical Consumption;</li>
-									-->
-								</ul>
-
-								<header>
-									<h2>Funding</h2>
-								</header>
-
-								<ul>
-									<!--<li>March 2021. We applied for £15K funds from the <a href="https://esrc.ukri.org/collaboration/collaboration-oportunities/impact-acceleration-accounts/">ESRC IAA account</a>. </li>-->
-									<li>Jan 2021. This research received £3000 funds from the <a href="https://www.gla.ac.uk/myglasgow/ris/knowledgeexchange/knowledgeexchangefunding/impactaccelerationaccounts/epsrciaa2017-2021/calls/">EPSRC IAA account</a>. </li>
-								</ul>
-								
-								<header>
-									<h2><a name="publications">Publications</a></h2>
-								</header>	
-
-									<ul>
-										<li class="envirofy-papers-entry"><span class="envirofy-papers-author">Shakeri, G., McCallum, C. H.</span>: <span class="envirofy-papers-title">Envirofy: a Real-time Tool to Support Eco-friendly Food Purchases Online.</span> To appear in <span class="envirofy-papers-publication">CHI Workshops/Symposia</span>, 2021.<a class="papercite_doi" href="#"><i class="fa fa-external-link papercite_doi"></i>&nbsp;Link.</a></li>
-										<li class="envirofy-papers-entry"><span class="envirofy-papers-author">Shakeri, G., McCallum, C. H.</span>: <span class="envirofy-papers-title">Envirofy your Shop: Development of a Real-time Tool to Support Eco-friendly Food Purchases Online.</span> To appear in <span class="envirofy-papers-publication">CHI Late-Breaking-Work</span>, 2021.<a class="papercite_doi" href="#"><i class="fa fa-external-link papercite_doi"></i>&nbsp;Link.</a></li>
-										<!--<li class="envirofy-papers-entry"><span class="envirofy-papers-author">Last, F., Last, F., Last, F.</span>: <span class="envirofy-papers-title">Amazing Paper Title.</span> In <span class="envirofy-papers-publication">Amazing Venue</span>, 2021.<a class="papercite_doi" href="#"><i class="fa fa-external-link papercite_doi"></i>&nbsp;Link.</a></li>-->
-									</ul>
-
-								<header>
-									<h2>The Code</h2>
-								</header>
-
-								<p>
-									Our <a href="https://osf.io/hm9gv/">code base</a> is open source. 
-								</p>
+								<div class="row">
+									
+									<div class="col-4 col-12-small">
+										<section class="box" style="text-align: center;">
+											<i class="icon solid featured alt fas fa-recycle"></i>
+										</section>
+									</div>
+									<div class="col-8 col-12-small">
+										<section class="box">
+											<header>
+												<h2>Recycling</h2>
+											</header>
+											<p>
+											The carbon footprint of the packaging is a function of the plastic’s life cycle [17], containing plastic production, recycling, and the waste
+											handling of the packaging [73]. If a food item’s packaging consists of recyclable and a non-recyclable components, the P value represents
+											both life cycles. If the online retailer does not specify the type of plastic (e.g. polypropylene, polystyrene), the average life cycle cost
+											for all plastic [25] is used. The computation of the P value is based on the assumption that all recyclable plastic will be recycled.
+											</p>
+										</section>
+									</div>
+								</div>
 								
 							</article>
 
