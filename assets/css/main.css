@@ -104,7 +104,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #5d5d5d;
-		font-size: 14pt;
+		font-size: 16pt;
 		line-height: 1.75em;
 	}
 
@@ -2035,6 +2035,10 @@ input, select, textarea {
 		position: relative;
 		text-decoration: none;
 	}
+		.icon:hover, .icon:focus {
+			cursor: pointer;
+			opacity: 0.75;
+		}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2074,7 +2078,7 @@ input, select, textarea {
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
 			margin: 0 0 4.5em 0;
-			cursor: default;
+			/* cursor: default; */
 		}
 
 			.icon.featured:before {
@@ -2102,11 +2106,11 @@ input, select, textarea {
 				}
 
 			.icon.featured.alt2 {
-				background-color: #827a7c;
+				background-color: #FF7700;
 			}
 
 				.icon.featured.alt2:after {
-					border-top-color: #827a7c;
+					border-top-color: #FF7700;
 				}
 
 /* Page Wrapper */
