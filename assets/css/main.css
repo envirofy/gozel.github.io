@@ -3016,7 +3016,7 @@ input, select, textarea {
 
 			#header {
 				text-align: center;
-				padding: 2em 0;
+				padding: 0.5em 0;
 			}
 
 				#header h1 {
@@ -3049,7 +3049,7 @@ input, select, textarea {
 			}
 
 				#banner header {
-					padding: 1.5em 1em 1.5em 1em;
+					padding: 0; 
 					display: block;
 					border-radius: 0;
 				}
