@@ -104,7 +104,7 @@ input, select, textarea {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #5d5d5d;
-		font-size: 16pt;
+		font-size: 14pt;
 		line-height: 1.75em;
 	}
 
@@ -2126,6 +2126,10 @@ input, select, textarea {
 
 				.icon.featured.alt3:after {
 					border-top-color: white;
+				}
+				.icon.featured.alt3:hover, .icon.featured.alt3:focus {
+					cursor: default;
+					opacity: 1;
 				}
 
 /* Page Wrapper */
