@@ -49,6 +49,7 @@
 																	<ul>
 																		<li><a href="sustainable-behaviour">Behaviour Interventions</a></li>
 																		<li><a href="food-carbon-calculation">CO<sub>2</sub> Calculation</a></li>
+																		<li><a href="our-vision">Our Vision</a></li>
 																	</ul>
 																</li>
 																<li><a href="install">Install</a></li>
@@ -75,49 +76,97 @@
 
 						<!-- Content -->
 							<article class="box post">
-								
+								<!--
 								<header>
 									<h2>What is the problem?</h2>
 								</header>
 								<p>
-									A third of global greenhouse gas (GHG) emissions are attributable to the food sector [1], however dietary change could reduce this by 49% [2]. Many people intend to make sustainable food choices [3], but fail to do so at the point-of-purchase [4]. Educating consumers on the environmental impact of their choices during their shop may be a powerful approach to tackling climate change [2]. 
+									A third of global greenhouse gas (GHG) emissions are attributable to the food sector [1], however dietary change could reduce this by 49% [2]. Educating consumers on the environmental impact of their choices during their shop may be a powerful approach to tackling climate change [2]. 
 									Envirofy helps to address this requirement by presenting theory- and evidence-based <a href="sustainable_behaviour">behavioural intervention techniques</a>, at the point-of-purchase, when online shopping. 
 								</p>
+								-->
 
 								<header>
-									<h2>How does Envirofy calculate the carbon footprint of foods?</h2>
+									<h2>What is a food's carbon footprint?</h2>
 								</header>
 								<p>
-								The carbon footprint of food can be calculated by adding the CO<sub>2</sub> emitted during <strong>production</strong>, <strong>transportation</strong>, and <strong>packaging</strong> of the food [5]: 
+								The carbon footprint of food can be calculated by adding the CO<sub>2</sub> emitted during <strong>production</strong>, <strong>transportation</strong>, and <strong>packaging</strong> of the food [1]: 
 								</p>
 
-								<p style="text-align: center;">
-								<strong>Total Environmental Impact = Food Production + Transportation + Packaging</strong>
-								</p>
+								<div class="row">
+									<div class="col-2 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<img src="images/logo/envirofy_logo.png" alt="" style="width:100%"/>
+										</section>
+									</div>
+									<div class="col-1 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<header>
+												<h3>=</h3>
+											</header>
+										</section>
+									</div>
+									<div class="col-2 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<a href="food-carbon-calculation#production"><i class="icon solid featured alt3 fas fa-industry" style="text-align: center;"></i></a>	
+										</section>
+									</div>
+									<div class="col-1 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<header>
+												<h3>+</h3>
+											</header>
+										</section>
+									</div>
+									<div class="col-2 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<a href="install"><i class="icon solid featured alt3 fas fa-truck"></i></a>
+										</section>
+									</div>
+									<div class="col-1 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<header>
+												<h3>+</h3>
+											</header>
+										</section>
+									</div>
+									<div class="col-2 col-6-medium col-12-small">
+										<section class="box" style="text-align: center;">
+											<a href="install"><i class="icon solid featured alt3 fas fa-recycle"></i></a>
+										</section>
+									</div>
+								</div>
 
 								<p>
 								The larger this result, the greater the impact of the food on the environment. 
-									Envirofy crawls the detail pages for all products from an online grocery retailer and extracts <i>Ingredients</i>, <i>Produce Of</i>, and 
+								</p>
+
+								<header>
+									<h2>Envirofy's Algorithm</h2>
+								</header>
+
+								<p>
+								This section explains in detail how Envirofy computes the carbon footprint of each food item. Envirofy crawls the detail pages for all products from an online grocery retailer and extracts <i>Ingredients</i>, <i>Produce Of</i>, and 
 									<i>Recycling</i> information to calculate the Total Environmental Impact (TEI). As a consumer's food waste cannot 
-									be determined at the point-of-purchase, it is neglected in the equation. The TEI is calculated for 100 grams of the product.
+									be determined at the point-of-purchase, it is neglected in the equation. The TEI is calculated for 100 grams of the product. 
 								</p>
 
 								<div class="row">
 									
-									<div class="col-4 col-12-small">
+									<div class="col-3 col-12-small">
 										<section class="box" style="text-align: center;">
 											<i class="icon solid featured alt fas fa-industry"></i>
 										</section>
 									</div>
-									<div class="col-8 col-12-small">
+									<div class="col-9 col-12-small">
 										<section class="box">
 											<header>
-												<h2>Food Production</h2>
+												<h3><a name="production">Food Production</a></h3>
 											</header>
 											<p>
 											The CO<sub>2</sub> cost of food production (e.g. environmental impact of growing food) is determined by the ingredients list. On the example of 
-											Tesco's Sharwoods Green Label Mango Chutney 227G [6] the ingredients list reads “Sugar, Mangoes (45%), Salt, Acid (Citric Acid), Spices”. 
-											The mean CO<sub>2</sub> value for each ingredient is extracted from [2,7] (CO<sub>2</sub> is 
+											Tesco's Sharwoods Green Label Mango Chutney 227G [3] the ingredients list reads “Sugar, Mangoes (45%), Salt, Acid (Citric Acid), Spices”. 
+											The mean CO<sub>2</sub> value for each ingredient is extracted from [2,4] (CO<sub>2</sub> is 
 											used as the measure of environmental impact as all publicly available databases provide these data, in contrast to GHG data). As the distribution of 
 											ingredients beyond the 45% mango is not clearly stated, an exponential decay function is applied to determine the composition of the 
 											remaining 55%: <i>y = a (1 - b) * x</i>; <i>x</i> is the number of remaining items in the list, <i>(1-b)</i> is the decay factor, and <i>a</i> is the remaining 
@@ -131,29 +180,29 @@
 
 								<div class="row">
 									
-									<div class="col-4 col-12-small">
+									<div class="col-3 col-12-small">
 										<section class="box" style="text-align: center;">
 											<i class="icon solid featured alt fas fa-truck"></i>
 										</section>
 									</div>
-									<div class="col-8 col-12-small">
+									<div class="col-9 col-12-small">
 										<section class="box">
 											<header>
-												<h2>Transportation</h2>
+												<h3>Transportation</h3>
 											</header>
 											<p>
 											The T value is described as: <i>y = d * m * w</i>, where <i>d</i> is the distance travelled, <i>m</i> is the mode of transportation (e.g. lorry, plane), 
 											and <i>w</i> is the net weight of the product. From a product's detail page, the list of origin countries is extracted. If there is a single 
 											country of origin, the distance between the user and that country's coordinates is calculated in kilometres. Country coordinates are from 
-											[8]; and participants' coordinates are retrieved from the online retailer's website, as it collects location data. 
-											If multiple countries are listed including the UK, it is first checked whether the product is in season in the UK [9]; 
+											[5]; and participants' coordinates are retrieved from the online retailer's website, as it collects location data. 
+											If multiple countries are listed including the UK, it is first checked whether the product is in season in the UK [6]; 
 											if true, the UK is assumed to be the country of origin. If however, the product is not in season in the UK or from outside the UK, the average 
 											distance from the participant's location to the other countries is calculated. 
 
 											Transport mode ---lorry, train, ship, plane --- is determined on the distance of the product from the consumer, and whether that product is 
 											perishable (e.g. avocados). Perishable foods are transported by train or plane, and non-perishable and frozen foods are transported by sea 
-											or lorry [10]. If a product originates in Europe, non-perishable foods are on average transported to the UK via lorries, 
-											and perishable foods via train; otherwise via ship or plane [11]. Keywords such as ``perfectly ripe``, ``frozen'', and ``dried'' 
+											or lorry [7]. If a product originates in Europe, non-perishable foods are on average transported to the UK via lorries, 
+											and perishable foods via train; otherwise via ship or plane [8]. Keywords such as ``perfectly ripe``, ``frozen'', and ``dried'' 
 											help determine the mode of transport, as well as categorisation of products into ``fresh'' or ``cupboard''. The net weight of a product is 
 											extracted from its detail page. 
 											</p>
@@ -163,21 +212,21 @@
 
 								<div class="row">
 									
-									<div class="col-4 col-12-small">
+									<div class="col-3 col-12-small">
 										<section class="box" style="text-align: center;">
 											<i class="icon solid featured alt fas fa-recycle"></i>
 										</section>
 									</div>
-									<div class="col-8 col-12-small">
+									<div class="col-9 col-12-small">
 										<section class="box">
 											<header>
-												<h2>Recycling</h2>
+												<h3>Recycling</h3>
 											</header>
 											<p>
-											The carbon footprint of the packaging is a function of the plastic’s life cycle [12], containing plastic production, recycling, and the waste
-											handling of the packaging [13]. If a food item’s packaging consists of recyclable and a non-recyclable components, the P value represents
+											The carbon footprint of the packaging is a function of the plastic’s life cycle [9], containing plastic production, recycling, and the waste
+											handling of the packaging [10]. If a food item’s packaging consists of recyclable and a non-recyclable components, the P value represents
 											both life cycles. If the online retailer does not specify the type of plastic (e.g. polypropylene, polystyrene), the average life cycle cost
-											for all plastic [14] is used. The computation of the P value is based on the assumption that all recyclable plastic will be recycled.
+											for all plastic [11] is used. The computation of the P value is based on the assumption that all recyclable plastic will be recycled.
 											</p>
 										</section>
 									</div>
@@ -188,20 +237,17 @@
 								</header>
 
 								<p style="font-size: 12pt">
-								[1] Christopher Dey, Charles Berger, Barney Foran, Miles Foran, Rowena Joske, Manfred Lenzen, and Richard Wood. 2007. Household environmental pressure from consumption: an Australian environmental atlas. Sydney University Press. </br>
+								[1] Fredrik Wikström, Helén Williams, Karli Verghese, and Stephen Clune. 2014. The influence of packaging attributes on consumer behaviour in food-packaging life cycle assessment studies - a neglected topic. Journal of Cleaner Production 73 (2014), 100 – 108. <a href="https://doi.org/10.1016/j.jclepro.2013.10.042">https://doi.org/10.1016/j.jclepro.2013.10.042</a> Towards eco-efficient agriculture and food systems: Selected papers from the Life Cycle Assessment (LCA) Food Conference, 2012, in Saint Malo, France.</br>
 								[2]  J. Poore and T. Nemecek. 2018. Reducing food’s environmental impacts through producers and consumers. Science 360, 6392 (2018), 987–992. <a href="https://doi.org/10.1126/science.aaq0216">https://doi.org/10.1126/science.aaq0216</a> arXiv:<a href="https://science.sciencemag.org/content/360/6392/987.full.pdf">https://science.sciencemag.org/content/360/6392/987.full.pdf</a> </br>
-								[3]  Iris Vermeir and Wim Verbeke. 2006. Sustainable food consumption: Exploring the consumer “attitude–behavioral intention” gap. Journal of Agricultural and Environmental ethics 19, 2 (2006), 169–194. </br>
-								[4]  Iris Vermeir and Wim Verbeke. 2008. Sustainable food consumption among young adults in Belgium: Theory of planned behaviour and the role of confidence and values. Ecological Economics 64, 3 (2008), 542 – 553. <a href="https://doi.org/10.1016/j.ecolecon.2007.03.007">https://doi.org/10.1016/j.ecolecon.2007.03.007</a> </br>
-								[5] Fredrik Wikström, Helén Williams, Karli Verghese, and Stephen Clune. 2014. The influence of packaging attributes on consumer behaviour in food-packaging life cycle assessment studies - a neglected topic. Journal of Cleaner Production 73 (2014), 100 – 108. <a href="https://doi.org/10.1016/j.jclepro.2013.10.042">https://doi.org/10.1016/j.jclepro.2013.10.042</a> Towards eco-efficient agriculture and food systems: Selected papers from the Life Cycle Assessment (LCA) Food Conference, 2012, in Saint Malo, France.</br>
-								[6] Tesco.com. 2020. Sharwoods Green Label Mango Chutney 227G. <a href="https://www.tesco.com/groceries/en-GB/products/254865566">https://www.tesco.com/groceries/en-GB/products/254865566</a> </br>
-								[7] Mike Berners-Lee. 2011. How bad are bananas?: the carbon footprint of everything. Greystone Books. </br>
-								[8]  Inc. CSG, Computer Support Group and CSGNetwork.Com. 2020. Countries, Capitals, Latitude and Longitude Table. <a href="http://www.csgnetwork.com/llinfotable.html">http://www.csgnetwork.com/llinfotable.html</a> </br>
-								[9]  The Vegetarian Society of the United Kingdom Limited. 2020. Seasonal UK grown produce. <a href="https://vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/">https://vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/</a> </br>
-								[10]  Time for Change. 2020. CO2 emissions for shipping of goods. <a href="https://timeforchange.org/co2-emissions-for-shipping-of-goods/">https://timeforchange.org/co2-emissions-for-shipping-of-goods/</a> </br>
-								[11]  Flanagan Logistics Warehouse Space. All rights reserved. 2017. How Is Food Transported? <a href="https://www.warehouse-space.co.uk/food-transport.html">https://www.warehouse-space.co.uk/food-transport.html</a> </br>
-								[12] Aaron Dormer, Donal P. Finn, Patrick Ward, and John Cullen. 2013. Carbon footprint analysis in plastics manufacturing. Journal of Cleaner Production 51 (2013), 133 – 141. <a href="https://doi.org/10.1016/j.jclepro.2013.01.014">https://doi.org/10.1016/j.jclepro.2013.01.014</a> </br>
-								[13] Zero Waste Scotland. 2020. The carbon impacts of recycling and the effects of transport. <a href="https://www.zerowastescotland.org.uk/sites/default/files/Carbon%20impacts%20of%20recycling%20and%20transport.pdf">https://www.zerowastescotland.org.uk/sites/default/files/Carbon%20impacts%20of%20recycling%20and%20transport.pdf</a> </br>
-								[14]  Juerg from Time for Change. 2020. Plastic bags and plastic bottles – CO2 emissions during their lifetime. <a href="https://timeforchange.org/plastic-bags-and-plastic-bottles-co2-emissions-during-their-lifetime/">https://timeforchange.org/plastic-bags-and-plastic-bottles-co2-emissions-during-their-lifetime/</a> </br>
+								[3] Tesco.com. 2020. Sharwoods Green Label Mango Chutney 227G. <a href="https://www.tesco.com/groceries/en-GB/products/254865566">https://www.tesco.com/groceries/en-GB/products/254865566</a> </br>
+								[4] Mike Berners-Lee. 2011. How bad are bananas?: the carbon footprint of everything. Greystone Books. </br>
+								[5]  Inc. CSG, Computer Support Group and CSGNetwork.Com. 2020. Countries, Capitals, Latitude and Longitude Table. <a href="http://www.csgnetwork.com/llinfotable.html">http://www.csgnetwork.com/llinfotable.html</a> </br>
+								[6]  The Vegetarian Society of the United Kingdom Limited. 2020. Seasonal UK grown produce. <a href="https://vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/">https://vegsoc.org/cookery-school/blog/seasonal-uk-grown-produce/</a> </br>
+								[7]  Time for Change. 2020. CO2 emissions for shipping of goods. <a href="https://timeforchange.org/co2-emissions-for-shipping-of-goods/">https://timeforchange.org/co2-emissions-for-shipping-of-goods/</a> </br>
+								[8]  Flanagan Logistics Warehouse Space. All rights reserved. 2017. How Is Food Transported? <a href="https://www.warehouse-space.co.uk/food-transport.html">https://www.warehouse-space.co.uk/food-transport.html</a> </br>
+								[9] Aaron Dormer, Donal P. Finn, Patrick Ward, and John Cullen. 2013. Carbon footprint analysis in plastics manufacturing. Journal of Cleaner Production 51 (2013), 133 – 141. <a href="https://doi.org/10.1016/j.jclepro.2013.01.014">https://doi.org/10.1016/j.jclepro.2013.01.014</a> </br>
+								[10] Zero Waste Scotland. 2020. The carbon impacts of recycling and the effects of transport. <a href="https://www.zerowastescotland.org.uk/sites/default/files/Carbon%20impacts%20of%20recycling%20and%20transport.pdf">https://www.zerowastescotland.org.uk/sites/default/files/Carbon%20impacts%20of%20recycling%20and%20transport.pdf</a> </br>
+								[11]  Juerg from Time for Change. 2020. Plastic bags and plastic bottles – CO2 emissions during their lifetime. <a href="https://timeforchange.org/plastic-bags-and-plastic-bottles-co2-emissions-during-their-lifetime/">https://timeforchange.org/plastic-bags-and-plastic-bottles-co2-emissions-during-their-lifetime/</a> </br>
 								</p>
 							</article>
 

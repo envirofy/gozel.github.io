@@ -2113,6 +2113,21 @@ input, select, textarea {
 					border-top-color: #FF7700;
 				}
 
+			.icon.featured.alt3 {
+				background-color: white;
+				color: #76a96e;
+				padding: 0;
+				margin: 0;
+			}
+			.icon.featured.alt3:before {
+				/* background-color: white; */
+				color: #76a96e;
+			}
+
+				.icon.featured.alt3:after {
+					border-top-color: white;
+				}
+
 /* Page Wrapper */
 
 	#page-wrapper > section {
