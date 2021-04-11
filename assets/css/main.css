@@ -2035,10 +2035,10 @@ input, select, textarea {
 		position: relative;
 		text-decoration: none;
 	}
-		.icon:hover, .icon:focus {
+		/* .icon:hover, .icon:focus {
 			cursor: pointer;
 			opacity: 0.75;
-		}
+		} */
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
